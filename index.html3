@@ -1,0 +1,194 @@
+1) print the odd numbers in an array
+anonymous : function (array){
+             for(var i = 0; i< array.length ; i++){
+              if(array[i]%2!=0){
+                console.log(array[i])
+              }
+             }
+}
+IIFE :    (function(array){
+          for(var i= 0; i< array.length; i++){
+            if(array[i]%2!=0){
+              console.log(array[i])
+            }
+          }
+})([1,2,3,4])
+
+Arrow function : oddnumbers = (array) =>{
+               for (var i = 0;i< array.length; i++){
+                if(array[i]%2!=0){
+                  console.log(array[i])
+
+                }
+               }
+}
+2) convert all the strings to title caps in a string array
+anonymous : function (str) {
+            str = str.toLowercase().split('');
+            for  (var i=0; i<str.length; i++){
+              str[i] = str[i].charAt(0).toUppercase()+ str[i].slice(1);
+            }
+            return str.join('');
+}
+IIFE : (function(str){
+       str = str.toLowercase().split('');
+       for (var i = 0; i< str.length; i++){
+        str[i] = str[i].charAt(0).toUppercase()+ str[i].slice(1);
+
+       }
+       return str.join('');
+})("ABI IS MY NAME");
+Arrow function : titlecase = (str)=>{
+                 str = str.toLowercase().split('');
+                 for (var i =0; i< str.lenght; i++){
+                  str[i] = str[i].charAt(0).toUppercase()+ str[i].slice(1);
+                 }
+                 return str.joi('');
+}
+3) sum of all numbers in ana array
+anonymous : function(array){
+              var sum = 0;
+              for(var i=0;i<array.length; i++){
+                sum = sum + array[i];
+              }
+              return sum;
+}
+IIFE :    (function(array){
+          var sum = 0;
+          for (var i=0; i< array.length; i++){
+            sum = sum + array[i];
+          }
+          return sum;
+})([1,2,3,4])
+Arrow :  sum =(array)=>{
+          var sum = 0;
+          for (var i = 0;i<array.lrngth; i++){
+            sum = sum + array[i];
+          }
+          return sum;
+}
+4) Return all the prime numbers in an aarray
+anonymous function :
+                    function(nunArray){
+                      numArray = numArray.filter((number)=>{
+                        for (var i = 2; i<=Math.sqrt(number);i++){
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                    }
+ IIFE
+                  (
+                    function (numArray){
+                      numArray = numArray.filter((number) =>{
+                        for (var i = 2; i<=Math.sqrt(number);i++){
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                    })([1,2,3,4])
+  Arrow function :
+  primeNumber = (numArray) =>{
+    numArray = numArray.filter((number) =>{
+      for (var i = 2; i<=Math.sqrt(number);i++){
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                    }
+  }                   
+     5) return all the palindromes in an array
+ function is Palindrome(N)
+ {
+  let str = "" + N;
+  lrt lrn = str.length;
+  for (let i=0; i< parseInt(len/2, 10);i++)
+ {
+  if (str[i] != ste[len-1-i])
+       return false;
+ }
+ return true;
+ }
+ anonymous function : function (arr,n)  
+ {
+  //Travesing each element of the array
+  //and check if it is palindrome or not
+  for(let i=0; i<n;i++)
+  {
+    let ans = isPalindrome (arr[i]);
+    if (ans == false)
+    return false;
+  }
+  return true;
+ } 
+ IIFE :
+          function (arr,n)  
+ {
+  //Travesing each element of the array
+  //and check if it is palindrome or not
+  for(let i=0; i<n;i++)
+  {
+    let ans = isPalindrome (arr[i]);
+    if (ans == false)
+    return false;
+  }
+  return true;
+ } )([1,2,3,]3)   
+ Arrow :
+Palindrome = (arr,n)=>
+ {
+  //Travesing each element of the array
+  //and check if it is palindrome or not
+  for(let i=0; i<n;i++)
+  {
+    let ans = isPalindrome (arr[i]);
+    if (ans == false)
+    return false;
+  }
+  return true;
+ } 
+ Q.Return median of two sorted array of some size
+ Q. Remove duplicates from an array
+ anonymous Function : function (array){
+                     let dup = [...new set(array)];
+                     console.log(dup);
+ }
+ IIFE :     (function(array){
+            let dup = [...new set(array)];
+                     console.log(dup);
+ })([1,1,2,3,4])
+ 
+ Q. Rotate ana array by K times
+ function reverse(array,li,ri){
+  while(li<ri){
+    int temp = a[li];
+    a[li] =a[ri];
+    a[ri] =temo;
+    li++;
+    ri--;
+  }
+  }
+  anonymous function : function(array ,K){
+                    K= k % a.length;
+                    if (K < 0){
+                    K += a.length;
+                    }
+                    reverse (a,0,a.length -K-1);
+                    reverse(a, a.length -K, a.length-1);
+                    reverse (a, 0, a.length-1);
+  }
+  IIFE :function(array ,K){
+                    K= k % a.length;
+                    if (K < 0){
+                    K += a.length;
+                    }
+                    reverse (a,0,a.length -K-1);
+                    reverse(a, a.length -K, a.length-1);
+                    reverse (a, 0, a.length-1);
+  })([1,2,3,4],2)
+
+  
+ 
